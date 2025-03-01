@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Customize Your Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .flowchart {
+            background-color:rgb(73, 197, 238); 
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            width: 250px;
+        }
+
+        .box {
+            padding: 10px 20px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 5px;
+            width: 150px;
+        }
+
+        .product-type {
+             background-color: rgb(101, 52, 225);
+             } 
+        .category, .sub-category { 
+            background-color:rgb(236, 236, 18); color: black;
+         } 
+        .product { 
+            background-color: rgb(15, 186, 15);
+         } 
+
+        .arrow {
+            width: 2px;
+            height: 20px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+<div class="container mt-5">
+    <div class="card shadow p-4">
+        <h3 class="mb-4 text-success">Let's Customize Your Shopnix Store</h3>
+        <p class="text-primary fs-4">Add a Type, Category, and Sub-category</p>
+
+        <div class="row d-flex justify-content-between pe-5">
+            <div class="col-md-6">
+                <form>
+                    <div class="mb-3">
+                        <label for="product-type" class="form-label">Add a Product Type</label><br>
+                        <input type="text" class="form-control" placeholder="e.g Book...." aria-label="Product-Type" aria-describedby="addon-wrapping">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="product-type" class="form-label">Add a Category(optional)</label><br>
+                        <input type="text" class="form-control" placeholder="e.g Academic Book...." aria-label="Category" aria-describedby="addon-wrapping">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="product-type" class="form-label">Add a Sub-catergory (optional)</label><br>
+                        <input type="text" class="form-control" placeholder="e.g Medical Book...." aria-label="Sub-Category" aria-describedby="addon-wrapping">
+                    </div>
+                </form>
+
+            </div>
+
+            
+            <div class="flowchart ">
+                <div class="box product-type">Product Type</div>
+                <div class="arrow"></div>
+                <div class="box category">Category</div>
+                <div class="arrow"></div>
+                <div class="box sub-category">Sub-Category</div>
+                <div class="arrow"></div>
+                <div class="box product">Product</div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center gap-3">
+            <button type="button" class="bck1 btn btn-secondary">Back</button>
+            <button type="button" class="nxt2 btn btn-primary">Next</button>
+        </div>
+    </div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector(".nxt2").addEventListener("click", function (event) {
+        event.preventDefault(); 
+        window.location.href = "Pages3.html"; 
+    });
+
+    
+    document.querySelectorAll(".bck1").forEach(button => {
+        button.addEventListener("click", function (event) {
+            event.preventDefault();
+            window.location.href = "Pages1.html"; 
+        });
+    });
+});
+
+
+    </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
