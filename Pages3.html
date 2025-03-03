@@ -127,6 +127,12 @@
             window.scrollTo({ top: 0, behavior: "smooth" });
 
             
+            const messageBox = document.createElement("div");
+            messageBox.className = "alert alert-success text-center p-2";
+            messageBox.innerText = "Form submitted successfully!";
+            document.body.prepend(messageBox); 
+
+            
             setTimeout(() => {
                 window.location.href = "Pages1.html";
             }, 3000);
